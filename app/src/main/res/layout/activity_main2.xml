@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.dariojolo.alojamientos.Main2Activity"
+    android:padding="8dp">
+
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="1 estrella"
+        android:id="@+id/button1"
+        android:elevation="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120dp"
+        android:textSize="15sp"
+        android:layout_marginBottom="8dp"
+        android:onClick="listarHoteles" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="2 estrella"
+        android:id="@+id/button2"
+        android:elevation="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignStart="@+id/button1"
+        android:layout_marginBottom="8dp"
+        android:onClick="listarHoteles" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="3 estrella"
+        android:id="@+id/button3"
+        android:elevation="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/button2"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginBottom="8dp"
+        android:onClick="listarHoteles" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="4 estrella"
+        android:id="@+id/button4"
+        android:elevation="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:onClick="listarHoteles" />
+    <Button
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="5 estrella"
+        android:id="@+id/button5"
+        android:elevation="10dp"
+        android:textSize="15sp"
+        android:layout_below="@+id/button4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="8dp"
+        android:onClick="listarHoteles" />
+</RelativeLayout>
