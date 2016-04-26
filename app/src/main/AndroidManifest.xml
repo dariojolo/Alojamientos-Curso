@@ -18,7 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListadoHotelesActivity" />
+        <activity android:name=".ListadoHotelesActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.dariojolo.alojamientos.Main2Activity" />
+        </activity>
         <activity android:name=".DetalleHotel"></activity>
     </application>
 
