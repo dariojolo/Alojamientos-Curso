@@ -2,27 +2,22 @@ package com.dariojolo.alojamientos;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.widget.Toast;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListadoHotelesActivity extends AppCompatActivity {
+public class ListadoHotelesListView extends AppCompatActivity {
 
-    /*
-Declarar instancias globales
-*/
-    private RecyclerView recycler;
-    private RecyclerView.Adapter adapter;
-    private RecyclerView.LayoutManager lManager;
-
+    ListView lista;
+    ArrayAdapter<Hotel> adaptador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       setContentView(R.layout.activity_listado_hoteles);
-       // TextView txtHoteles = (TextView)findViewById(R.id.txtHoteles);
+        setContentView(R.layout.activity_listado_hoteles_list_view);
+
+        lista = (ListView)findViewById(R.id.lista);
 
         String idSeleccionado = getIntent().getExtras().getString("ID");
 
@@ -72,23 +67,10 @@ Declarar instancias globales
             }
         }
 
+        adaptador = new ArrayAdapter<String>(this,R.layout.lista_layout, items);
 
-// Obtener el Recycler
-        recycler = (RecyclerView) findViewById(R.id.reciclador);
-        recycler.setHasFixedSize(true);
+        lista.setAdapter(adaptador);
 
-// Usar un administrador para LinearLayout
-        lManager = new LinearLayoutManager(this);
-        recycler.setLayoutManager(lManager);
 
-// Crear un nuevo adaptador
-        adapter = new HotelAdapter(items,new HotelAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClick(RecyclerView.ViewHolder holder, int posicion) {
-                Toast.makeText(getApplicationContext(),"Posicion: "+ posicion,Toast.LENGTH_LONG).show();
-            }
-        },this);
-        recycler.setAdapter(adapter);
     }
-
 }
